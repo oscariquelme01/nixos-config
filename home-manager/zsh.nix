@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
    programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -7,7 +7,7 @@
 
     shellAliases = {
       ll = "ls -l";
-      update = "sudo nixos-rebuild switch";
+      update = "sudo nixos-rebuild switch --flake .#topi";
     };
     history.size = 10000;
   };

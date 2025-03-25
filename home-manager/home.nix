@@ -38,15 +38,18 @@
     };
   };
 
-  # TODO: Set your username
   home = {
-    username = "your-username";
-    homeDirectory = "/home/your-username";
+    username = "topi";
+    homeDirectory = "/home/topi";
   };
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ nvim kitty ];
+  home.packages = with pkgs; [
+    neovim
+    alacritty
+    rofi-wayland
+  ];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
