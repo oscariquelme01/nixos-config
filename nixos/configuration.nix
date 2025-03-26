@@ -17,6 +17,8 @@
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
 
+    ./nvidia.nix
+
     # Import home-manager's NixOS module
     inputs.home-manager.nixosModules.home-manager
   ];
@@ -74,6 +76,22 @@
   };
 
   programs.zsh.enable = true;
+  programs.hyprland = {
+    enable = true;
+    nvidiaPatches = true;
+    xwayland.enable = true;
+  };
+
+  hardware = {
+    # openGl
+    opengl.enable = true;
+    nvidia.modesetting.enable = true;
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+  };
 
   boot.extraModulePackages = [
     # config.boot.kernelPackages.r8168

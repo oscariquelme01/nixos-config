@@ -49,6 +49,8 @@
     neovim
     alacritty
     rofi-wayland
+    nerdfonts
+    tmux
   ];
 
   # Enable home-manager and git
