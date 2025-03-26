@@ -51,6 +51,7 @@
     rofi-wayland
     nerdfonts
     tmux
+    firefox
   ];
 
   # Enable home-manager and git

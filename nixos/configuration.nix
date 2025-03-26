@@ -78,15 +78,7 @@
   programs.zsh.enable = true;
   programs.hyprland = {
     enable = true;
-    nvidiaPatches = true;
     xwayland.enable = true;
-  };
-
-  hardware = {
-    # openGl
-    opengl.enable = true;
-    nvidia.modesetting.enable = true;
-    nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
   environment.sessionVariables = {
