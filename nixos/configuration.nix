@@ -18,6 +18,7 @@
     ./hardware-configuration.nix
 
     ./nvidia.nix
+    ./sound.nix
 
     # Import home-manager's NixOS module
     inputs.home-manager.nixosModules.home-manager
