@@ -55,6 +55,7 @@
     firefox
     pavucontrol
     todoist-electron
+    wl-clipboard
   ];
 
   # Enable home-manager and git

@@ -6,12 +6,15 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    initExtra = {
-      ''
-      bindkey "^[0c]" forward-word
-      bindkey
-      '';
-    }
+    initExtra = ''
+      bindkey '^[0c' forward-word
+      bindkey '^[0d' backward-word
+    '';
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "sudo" ];
+    };
 
     shellAliases = {
       ll = "ls -l";
