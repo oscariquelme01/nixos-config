@@ -13,7 +13,7 @@
     # inputs.nix-colors.homeManagerModule
 
     # You can also split up your configuration and import pieces of it here:
-    ./zsh.nix
+    ./shell
   ];
 
   nixpkgs = {
@@ -47,11 +47,14 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     neovim
+    ripgrep
     alacritty
     rofi-wayland
     nerdfonts
     tmux
     firefox
+    pavucontrol
+    todoist-electron
   ];
 
   # Enable home-manager and git

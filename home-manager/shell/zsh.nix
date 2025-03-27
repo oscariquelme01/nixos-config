@@ -2,8 +2,16 @@
    programs.zsh = {
     enable = true;
     enableCompletion = true;
-    # autosuggestions.enable = true;
-    # syntaxHighlighting.enable = true;
+    
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    initExtra = {
+      ''
+      bindkey "^[0c]" forward-word
+      bindkey
+      '';
+    }
 
     shellAliases = {
       ll = "ls -l";
