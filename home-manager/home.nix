@@ -56,6 +56,7 @@
     pavucontrol
     todoist-electron
     wl-clipboard
+    discord
   ];
 
   # Enable home-manager and git
