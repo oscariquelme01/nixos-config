@@ -57,6 +57,10 @@
     todoist-electron
     wl-clipboard
     discord
+    gcc
+    nix
+    redis
+    bun
   ];
 
   # Enable home-manager and git
