@@ -53,7 +53,6 @@
     rofi-wayland
     nerdfonts
     tmux
-    firefox
     pavucontrol
     todoist-electron
     wl-clipboard

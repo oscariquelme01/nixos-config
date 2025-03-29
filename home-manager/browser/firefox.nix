@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   lib,
   ...
@@ -6,7 +7,7 @@
   programs.browserpass.enable = true;
   programs.firefox = {
     enable = true;
-    profiles.gabriel = {
+    profiles.topi = {
       search = {
         force = true;
         default = "Kagi";
@@ -21,9 +22,11 @@
         };
       };
       bookmarks = {};
-      extensions.packages = with pkgs.inputs.firefox-addons; [
+      extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         ublock-origin
         browserpass
+        web-search-navigator
+        vimium
       ];
       bookmarks = {};
       settings = {
@@ -115,13 +118,6 @@
           seen = ["save-to-pocket-button" "developer-button" "ublock0_raymondhill_net-browser-action" "_testpilot-containers-browser-action"];
         };
       };
-    };
-  };
-
-  home = {
-    persistence = {
-      # Not persisting is safer
-      # "/persist/${config.home.homeDirectory}".directories = [ ".mozilla/firefox" ];
     };
   };
 
