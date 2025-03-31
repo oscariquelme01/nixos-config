@@ -61,6 +61,7 @@
     nix
     redis
     bun
+    obsidian
   ];
 
   # Enable home-manager and git
