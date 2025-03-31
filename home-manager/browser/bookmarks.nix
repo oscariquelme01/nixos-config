@@ -3,18 +3,16 @@ let
   short = short: name: url: { name = short; inherit url; };
   dir = name: bookmarks: { inherit name bookmarks; };
 in [
-  (short "tr" "Translate" "https://translate.google.no/?hl=no")
-  (short "gm" "Gmail" "https://mail.google.com/mail/u/0/#inbox")
-  (short "辞書" "Jisho" "https://jisho.org/?color_theme=dark")
   (link "GitHub" "http://github.com")
-  (short "/u/" "danger/u/" "https://dangeru.us/")
-  (link "PVV" "https://www.pvv.ntnu.no/")
-  (short "PVVM" "PVV Mail" "https://webmail.pvv.ntnu.no/roundcube/")
-  (short "ΩV" "Omega Verksted" "https://omegav.no/")
+
+  (dir "Mail" [
+    (link "Gmail" "https://mail.google.com/mail/u/0/#inbox")
+    (link "Outlook" "https://outlook.office365.com/mail/")
+  ])
 
   (dir "Nix" [
-    (link "Nixpkgs" "https://github.com/NixOS/nixpkgs")
-    (link "Home-manager" "https://github.com/nix-community/home-manager")
+    (link "Nixpkgs-search" "https://search.nixos.org/packages")
+    (link "Home-manager-search" "https://home-manager-options.extranix.com/")
     (link "Nixpkgs Manual" "https://ryantm.github.io/nixpkgs/")
     (link "Nix Lib Manual" "https://teu5us.github.io/nix-lib.html")
     (link "Nix Lib" "https://github.com/NixOS/nixpkgs/tree/master/lib")
@@ -22,12 +20,7 @@ in [
     (link "Nix Lib - Lists" "https://github.com/NixOS/nixpkgs/blob/master/lib/lists.nix")
     (link "Nix Lib - Attrs" "https://github.com/NixOS/nixpkgs/blob/master/lib/attrs.nix")
     (link "Noogle" "https://noogle.dev/")
-    (link "Nixpkgs Hound" "https://search.nix.gsc.io/")
-    (short "NXPR" "Nixpkgs PR Progress Tracker" "https://nixpk.gs/pr-tracker.html")
-    (link "Nix package versions" "https://lazamar.co.uk/nix-versions/")
-    (link "Pkgs on Nix" "https://pkgs.on-nix.com/")
     (link "NixOS Infra Status" "https://status.nixos.org/")
-    (link "NixOS R13Y" "https://r13y.com/")
   ])
 
   (dir "CTF" [
@@ -103,27 +96,10 @@ in [
     (link "jpdb" "https://jpdb.io/")
   ])
 
-  (dir "Selfhosting" [
-    (link "NoIP" "https://my.noip.com/#!/dynamic-dns")
-    (link "Epik" "https://registrar.epik.com/domain/portfolio")
-    (link "ASUS Gateway" "http://router.asus.com/")
-    (link "Cloudflare Dashboard" "https://dash.cloudflare.com")
-    (link "WWW" "https://www.nani.wtf/")
-    (link "MAdmin" "https://madmin.nani.wtf")
-    (link "Git" "https://git.nani.wtf/explore/repos/")
-    (link "Docs" "https://docs.nani.wtf/")
-    (link "Grafana" "https://log.nani.wtf/")
-  ])
-
-  (dir "NTNU" [
-    (link "Innsida" "https://innsida.ntnu.no/start#/feed/")
-    (link "Outlook" "https://outlook.office.com/mail/inbox")
-    (link "Blackboard" "https://ntnu.blackboard.com/")
-    (link "Grades" "https://grades.no/")
-    (link "Wikipendium" "https://www.wikipendium.no/")
-    (link "Inspera" "https://ntnu.inspera.no/")
-    (link "Shorty" "https://s.ntnu.no/")
-    (link "NTNU Tjenester" "https://i.ntnu.no/alt-innhold")
-    (link "EMNR" "https://emnr.no/")
+  (dir "orenes" [
+    (link "MAAT" "https://maatevolution.betserver.es/home")
+    (link "Kolyseo - des01" "https://des.betserver.es/")
+    (link "Kolyseo - des02" "https://des02.betserver.es/")
+    (link "Aggregators API - des02" "https://des02.betserver.es/")
   ])
 ]

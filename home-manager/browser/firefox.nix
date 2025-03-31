@@ -11,7 +11,7 @@
       # Default bookmarks, do note that this might silently override any handmade bookmarks
       bookmarks = [{
         toolbar = true;
-        bookmarks = import ./bookmarks.nix
+        bookmarks = import ./bookmarks.nix;
       }];
 
       # Extensions configured with the firefox-extensions flake
@@ -95,7 +95,7 @@
         "svg.context-properties.content.enabled" = true;
 
         # Disable mouse wheel pasting
-        middlemouse.paste = false;
+        "middlemouse.paste" = false;
 
         # Disable fx accounts
         "identity.fxaccounts.enabled" = false;
