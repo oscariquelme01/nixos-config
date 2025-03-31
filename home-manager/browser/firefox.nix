@@ -9,27 +9,10 @@
     enable = true;
     profiles.topi = {
       # Default bookmarks, do note that this might silently override any handmade bookmarks
-      bookmarks = [
-        {
-          name = "Gmail";
-          url = "https://mail.google.com/mail/u/0/#inbox";
-        }
-        {
-          name = "Nix sites";
-          toolbar = true;
-          bookmarks = [
-            {
-              name = "homepage";
-              url = "https://nixos.org/";
-            }
-            {
-              name = "wiki";
-              tags = [ "wiki" "nix" ];
-              url = "https://wiki.nixos.org/";
-            }
-          ];
-        }
-      ];
+      bookmarks = [{
+        toolbar = true;
+        bookmarks = import ./bookmarks.nix
+      }];
 
       # Extensions configured with the firefox-extensions flake
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
@@ -110,6 +93,9 @@
         "layers.acceleration.force-enabled" = true;
         "gfx.webrender.all" = true;
         "svg.context-properties.content.enabled" = true;
+
+        # Disable mouse wheel pasting
+        middlemouse.paste = false;
 
         # Disable fx accounts
         "identity.fxaccounts.enabled" = false;
