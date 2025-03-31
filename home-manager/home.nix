@@ -62,6 +62,7 @@
     redis
     bun
     obsidian
+    waybar
   ];
 
   # Enable home-manager and git
