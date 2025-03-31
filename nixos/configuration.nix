@@ -77,6 +77,12 @@
     consoleMode = "auto";
   };
 
+  # dynamic libs linking
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    libz
+  ];
+
   programs.zsh.enable = true;
   programs.hyprland = {
     enable = true;

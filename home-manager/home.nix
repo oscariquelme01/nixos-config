@@ -63,6 +63,7 @@
     bun
     obsidian
     waybar
+    jetbrains.idea-community
   ];
 
   # Enable home-manager and git
