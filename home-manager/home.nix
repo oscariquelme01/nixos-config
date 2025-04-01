@@ -20,15 +20,13 @@
   nixpkgs = {
     # You can add overlays here
     overlays = [
-      # If you want to use overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
+      (final: _: {
+        # this allows you to access `pkgs.unstable` anywhere in your config
+        unstable = import inputs.nixpkgs-unstable {
+          inherit (final.stdenv.hostPlatform) system;
+          inherit (final) config;
+        };
+      })
     ];
     # Configure your nixpkgs instance
     config = {
@@ -47,7 +45,7 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
-    neovim
+    unstable.neovim # Temporary fix, grab nvim from unstable to get the 0.11 release
     ripgrep
     alacritty
     rofi-wayland
