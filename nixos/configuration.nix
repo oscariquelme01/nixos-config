@@ -98,6 +98,9 @@
   ];
 
   networking.hostName = "topi";
+  networking.hosts = {
+    "0.0.0.0" = [ "www.instagram.com" ];
+  };
 
   users.users = {
     topi = {
