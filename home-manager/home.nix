@@ -62,6 +62,9 @@
     obsidian
     waybar
     jetbrains.idea-community
+    teams-for-linux
+    nodejs_23
+    openfortivpn
   ];
 
   # Enable home-manager and git
