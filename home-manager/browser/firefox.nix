@@ -20,6 +20,7 @@
         browserpass
         web-search-navigator
         vimium
+        df-youtube
       ];
 
       settings = {
