@@ -156,8 +156,8 @@
           display: none !important
         }
 
-        /* Extensions button */
-        #unified-extensions-button {
+        /* Reload button */
+        #reload-button {
           display: none !important
         }
 

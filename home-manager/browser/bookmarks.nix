@@ -102,4 +102,10 @@ in [
     (link "Kolyseo - des02" "https://des02.betserver.es/")
     (link "Aggregators API - des02" "https://des02.betserver.es/")
   ])
+
+  (dir "OTW" [
+    (link "Linkedin" "https://www.linkedin.com/jobs/")
+    (link "Google Careers" "https://www.google.com/about/careers/applications/dashboard")
+    (link "Digitech (swiss talent broker)" "http://www.digitechsearch.com/")
+  ])
 ]
