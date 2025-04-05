@@ -65,6 +65,8 @@
     teams-for-linux
     nodejs_23
     openfortivpn
+    zathura
+    texliveFull
   ];
 
   # Enable home-manager and git
