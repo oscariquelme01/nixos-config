@@ -13,6 +13,7 @@ in [
   (dir "Nix" [
     (link "Nixpkgs-search" "https://search.nixos.org/packages")
     (link "Home-manager-search" "https://home-manager-options.extranix.com/")
+    (link "The goal" "https://github.com/Frost-Phoenix/nixos-config")
     (link "Nixpkgs Manual" "https://ryantm.github.io/nixpkgs/")
     (link "Nix Lib Manual" "https://teu5us.github.io/nix-lib.html")
     (link "Nix Lib" "https://github.com/NixOS/nixpkgs/tree/master/lib")
