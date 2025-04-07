@@ -20,6 +20,7 @@
     ./nvidia.nix
     ./sound.nix
     ./ssh.nix
+    ./flameshot.nix
 
     # Import home-manager's NixOS module
     inputs.home-manager.nixosModules.home-manager

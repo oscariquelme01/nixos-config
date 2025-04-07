@@ -67,6 +67,8 @@
     openfortivpn
     zathura
     texliveFull
+    cargo
+    unzip
   ];
 
   # Enable home-manager and git
