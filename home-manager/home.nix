@@ -69,6 +69,7 @@
     texliveFull
     cargo
     unzip
+    (flameshot.override { enableWlrSupport = true; })
   ];
 
   # Enable home-manager and git
