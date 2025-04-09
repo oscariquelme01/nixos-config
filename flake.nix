@@ -12,11 +12,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Third party programs, packaged with nix
+    # Third party firefox-addons, packaged with nix
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Nightly versions cause we are that hardcore
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = {
@@ -26,16 +29,18 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+    username = "topi";
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
       topi = nixpkgs.lib.nixosSystem {
         specialArgs = {
-            inherit inputs outputs;
+            host = "desktop";
+            inherit inputs outputs username;
         };
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = [./modules/nixos/configuration.nix];
       };
     };
   };

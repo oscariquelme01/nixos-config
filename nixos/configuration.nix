@@ -75,6 +75,7 @@
   boot.loader.systemd-boot = {
     enable = true;
     consoleMode = "auto";
+    memtest86.enable = true;
   };
 
   # dynamic libs linking
