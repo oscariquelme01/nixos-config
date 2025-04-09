@@ -46,7 +46,6 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
-    unstable.neovim # Temporary fix, grab nvim from unstable to get the 0.11 release
     ripgrep
     alacritty
     rofi-wayland

@@ -8,7 +8,7 @@
       imports = [ ./../home-manager/home.nix ];
       home.username = "${username}";
       home.homeDirectory = "/home/${username}";
-      home.stateVersion = "24.05";
+      home.stateVersion = "23.05";
       programs.home-manager.enable = true;
     };
   };
