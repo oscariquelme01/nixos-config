@@ -4,6 +4,7 @@
   inputs,
   lib,
   config,
+  outputs,
   ...
 }: {
   # You can import other NixOS modules here
@@ -30,10 +31,16 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
-  # Allow unfree software
   nixpkgs = {
+    overlays = [
+      outputs.overlays.unstable-packages
+    ];
+    # Configure your nixpkgs instance
     config = {
+      # Disable if you don't want unfree packages
       allowUnfree = true;
+      # Workaround for https://github.com/nix-community/home-manager/issues/2942
+      allowUnfreePredicate = _: true;
     };
   };
 
