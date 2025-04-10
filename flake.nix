@@ -4,7 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     # Home manager
     home-manager = {
@@ -19,14 +19,8 @@
     };
 
     # Nightly versions cause we are that hardcore
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      # inputs.nixpkgs.follows = "nixpkgs"; # For some reason this fails?? maybe it needs its own nixpkgs version
-    };
-    neovim-nightly-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprland.url = "github:hyprwm/Hyprland"; # doesn't follow nixpkgs becasue 'libgbm' is missing (?) might try later on in the future
+    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay" ;
 
   };
 
@@ -39,6 +33,9 @@
     inherit (self) outputs;
     username = "topi";
   in {
+    # Include overlays in the outputs
+    overlays = import ./overlays {inherit inputs;};
+
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
