@@ -19,7 +19,7 @@
     };
 
     # Nightly versions cause we are that hardcore
-    # hyprland.url = "github:hyprwm/Hyprland"; # doesn't follow nixpkgs becasue 'libgbm' is missing (?) might try later on in the future
+    hyprland.url = "github:hyprwm/Hyprland"; # doesn't follow nixpkgs becasue 'libgbm' is missing (?) might try later on in the future
     # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay" ;
 
   };
