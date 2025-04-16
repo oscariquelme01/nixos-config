@@ -3,6 +3,7 @@
   home-manager = {
     useUserPackages = true;
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs username host outputs; };
     users.${username} = {
       imports = [ ./../home-manager/home.nix ];
