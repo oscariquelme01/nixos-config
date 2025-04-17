@@ -51,6 +51,8 @@
     (flameshot.override { enableWlrSupport = true; })
     hyprshot
     jq
+    yazi
+    ueberzugpp
   ];
 
   # Enable home-manager and git
