@@ -1,25 +1,28 @@
-{ username, pkgs, }:{
-  home-manager.users.${username}.wayland.windowManager.hyprland = {
+{ pkgs, ... }:{
+  wayland.windowManager.hyprland = {
     enable = true;
-    package = null;
-    portalPackage = null;
+    package = pkgs.hyprland;
 
     settings = {
-      "$mod" = "SUPER";
+      "$mainMod" = "SUPER";
 
-      "$termianl" = "alacritty";
+      "$terminal" = "alacritty";
       "$menu" = "rofi -show drun";
 
       exec-once = "waybar & hyprpaper";
+
+      env = ["XCURSOR_SIZE,24" "HYPRCURSOR_SIZE,24"];
+
+      monitor = [
+        "DP-2,1920x1080@144,0x0,1"
+        "DP-1,1080x1920,1920x0,1,transform,3"
+      ];
 
       general = {
         gaps_in = 0;
         gaps_out = 0;
 
         border_size = 1;
-
-        col.active_border = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        col.inactive_border = "rgba(595959aa)";
 
         resize_on_border = false;
 
